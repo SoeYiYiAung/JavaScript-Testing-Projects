@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<title>Photo Gallery</title>
+<style></style>
+<script>
+
+let nums = [1, 2, 3, 4, 5]
+let result = nums.map(function(n) {
+ return n + 1
+})
+// result → [2, 3, 4, 5, 6]
+
+
+
+let nums = [1, 2, 3, 4, 5]
+let result = nums.filter(function(n) {
+ return n % 2
+})
+// result → [1, 5, 7]
+
+
+let nums = [1, 2, 3, 4, 5]
+let result = nums.filter(function(n) {
+ return !(n % 2)
+})
+// result → [2, 4]
+
+
+let nums = [1, 2, 3, 4, 5]
+let result = nums.map(n => n + 2).filter(n => n % 2)
+// result → [3, 5, 7]
+
+
+
+let nums = [2, 3, 4, 5, 6]
+let result = nums.reduce(function(a, n) {
+ return a + n
+})
+// result → 20
+
+let nums = [1, 2, 3]
+let alphas = ['a', 'b', 'c']
+let result = [ nums, alphas ]
+// [ [1, 2, 3], ['a', 'b', 'c'] ]
+
+
+let nums = [1, 2, 3]
+let alphas = ['a', 'b', 'c']
+let result = [ ...nums, ...alphas ] 
+// [ 1, 2, 3, 'a', 'b', 'c' ]
+
+
+let nums = [1, 2, 3]
+let four = [ ...nums, 4 ] // [1, 2, 3, 4]
+let zero = [ 0, ...nums ] // [0, 1, 2, 3]
+
+
+</script>
+<boby>
+</body>
+</html>

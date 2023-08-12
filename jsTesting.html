@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<title>js Testing</title>
+<script>
+let people = [
+{ name: "Alex" },
+{ name: "Bob", gender: "M" },
+{ name: "Tom", gender: "m" },
+{ name: "Mary", gender: "F" },
+]
+let result = people.map(function(person) {
+if(person.gender) {
+if(person.gender === "m" || person.gender === "M") {
+person.gender = "Male"
+}
+if(person.gender === "f" || person.gender === "F") {
+person.gender = "Female"
+}
+} else {
+person.gender = "Unknown"
+}
+return person
+})
+console.log(result)
+
+
+//next way
+let result1 = people.map(function(person) {
+if(person.gender === "m" || person.gender === "M") {
+person.gender = "Male"
+} else if(person.gender === "f" || person.gender === "F") {
+person.gender = "Female"
+} else {
+person.gender = "Unknown"
+}
+return person
+})
+
+console.log(result1)
+
+//switch
+let result2 = people.map(function(person) {
+switch(person.gender) {
+case "m":
+case "M":
+person.gender = "Male"
+break
+case "f":
+case "F":
+person.gender = "Female"
+break
+default:
+person.gender = "Unknown"
+}
+return person
+})
+
+//Condition ? Do-this-if-true : Do-this-if-false
+let user = { name: "Bob", age: 17 }
+let status = user.age >= 18 ? "Authorized" : "Unauthorized"
+console.log(status)
+
+//Loop
+let nums = [11, 22, -1 , 44]
+for(let i=0; i < nums.length; i++) {
+if(nums[i] < 0) continue
+console.log(nums[i])
+}
+
+
+</script>
+</head>
+
+<boby>
+</body>
+</html>
